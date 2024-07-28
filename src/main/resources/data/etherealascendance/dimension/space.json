@@ -1,0 +1,10 @@
+{
+  "type": "etherealascendance:space",
+  "generator": {
+    "type": "minecraft:flat",
+    "settings": {
+      "biome": "etherealascendance:space",
+      "layers": []
+    }
+  }
+}

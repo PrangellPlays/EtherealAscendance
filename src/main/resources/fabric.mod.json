@@ -1,0 +1,38 @@
+{
+	"schemaVersion": 1,
+	"id": "etherealascendance",
+	"version": "${version}",
+	"name": "Ethereal Ascendance",
+	"description": "A RFTS inspired space exploration mod",
+	"authors": [
+	    "Owner - PrangellPlays",
+		"Author - Soulspark Studios",
+		"Inspired by Doctor4t"
+	],
+	"license": "Souksspark Studios",
+	"icon": "assets/etherealascendance/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"dev.soulsparkstudios.etherealascendance.EtherealAscendance"
+		],
+		"client": [
+			"dev.soulsparkstudios.etherealascendance.EtherealAscendanceClient"
+		],
+		"fabric-datagen": [
+			"dev.soulsparkstudios.etherealascendance.EtherealAscendanceDataGenerator"
+		]
+	},
+	"mixins": [
+		"etherealascendance.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.15.11",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}

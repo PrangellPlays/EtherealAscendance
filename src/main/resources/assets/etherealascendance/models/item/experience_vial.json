@@ -1,0 +1,18 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "etherealascendance:item/experience_vial/experience_vial"
+  },
+  "overrides": [
+    { "predicate": { "experience": 0.00000 }, "model": "etherealascendance:item/experience_vial" },
+    { "predicate": { "experience": 0.00001 }, "model": "etherealascendance:item/experience_vial/experience_vial_1" },
+    { "predicate": { "experience": 0.11111 }, "model": "etherealascendance:item/experience_vial/experience_vial_2" },
+    { "predicate": { "experience": 0.22222 }, "model": "etherealascendance:item/experience_vial/experience_vial_3" },
+    { "predicate": { "experience": 0.33333 }, "model": "etherealascendance:item/experience_vial/experience_vial_4" },
+    { "predicate": { "experience": 0.44444 }, "model": "etherealascendance:item/experience_vial/experience_vial_5" },
+    { "predicate": { "experience": 0.66666 }, "model": "etherealascendance:item/experience_vial/experience_vial_6" },
+    { "predicate": { "experience": 0.77777 }, "model": "etherealascendance:item/experience_vial/experience_vial_7" },
+    { "predicate": { "experience": 0.88888 }, "model": "etherealascendance:item/experience_vial/experience_vial_8" },
+    { "predicate": { "experience": 0.99999 }, "model": "etherealascendance:item/experience_vial/experience_vial_9" }
+  ]
+}

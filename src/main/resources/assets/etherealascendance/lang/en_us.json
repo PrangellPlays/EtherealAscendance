@@ -1,0 +1,28 @@
+{
+  "__Comment": "Items",
+  "item.etherealascendance.stellaryx_bucket": "Stellaryx Bucket",
+  "item.etherealascendance.experience_vial": "Experience Vial",
+  "item.etherealascendance.experience_vial.levels": "Experience: %1$s",
+  "item.etherealascendance.experience_vial.usage.fill": "%1$s + %2$s to fill",
+  "item.etherealascendance.experience_vial.usage.drain": "%1$s to drain",
+
+  "__Comment": "Canisters",
+  "item.etherealascendance.empty_canister": "Empty Canister",
+  "item.etherealascendance.stellaryx_canister": "Stellaryx Canister",
+
+  "__Comment": "Blocks",
+  "block.etherealascendance.stellaryx": "Stellaryx",
+  "block.etherealascendance.glass": "Glass",
+  "block.etherealascendance.glass.description": "Has connected textures",
+  "block.etherealascendance.privacy_glass": "Privacy Glass",
+  "block.etherealascendance.privacy_glass.description_1": "%1$s to toggle privacy",
+  "block.etherealascendance.privacy_glass.description_2": "Has connected textures",
+
+  "_comment": "Sounds",
+  "sounds.sculk_vial.withdraw": "Experience Withdrew",
+  "sounds.sculk_vial.deposit": "Experience Deposited",
+
+  "__Comment": "Item Groups",
+  "itemgroup.etherealascendance.items": "Ethereal Ascendance Items",
+  "itemgroup.etherealascendance.blocks": "Ethereal Ascendance Blocks"
+}

@@ -1,0 +1,12 @@
+{
+  "sounds.experience_vial.withdraw": {
+    "sounds": [
+      "etherealascendance:item/experience_vial/withdraw"
+    ]
+  },
+  "sounds.experience_vial.deposit": {
+    "sounds": [
+      "etherealascendance:item/experience_vial/deposit"
+    ]
+  }
+}
