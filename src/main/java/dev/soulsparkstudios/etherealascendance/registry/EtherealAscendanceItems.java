@@ -2,6 +2,7 @@ package dev.soulsparkstudios.etherealascendance.registry;
 
 import dev.soulsparkstudios.etherealascendance.EtherealAscendance;
 import dev.soulsparkstudios.etherealascendance.item.ExperienceVialItem;
+import dev.soulsparkstudios.etherealascendance.item.RationsItem;
 import dev.soulsparkstudios.etherealascendance.item.canisters.EmptyCanister;
 import dev.soulsparkstudios.etherealascendance.item.canisters.StellaryxCanister;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
@@ -17,6 +18,7 @@ public class EtherealAscendanceItems {
     public static final Item EMPTY_CANISTER = registerItem("empty_canister", new EmptyCanister(new FabricItemSettings().maxCount(1)));
     public static final Item STELLARYX_CANISTER = registerItem("stellaryx_canister", new StellaryxCanister(new FabricItemSettings().maxCount(1)));
     public static final Item EXPERIENCE_VIAL = registerItem("experience_vial", new ExperienceVialItem(new FabricItemSettings().maxCount(1).rarity(Rarity.RARE)));
+    public static final Item RATIONS = registerItem("rations", new RationsItem(new FabricItemSettings().food(EtherealAscendanceFoodComponents.RATIONS).maxCount(64)));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(EtherealAscendance.MOD_ID, name), item);

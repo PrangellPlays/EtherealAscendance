@@ -20,39 +20,9 @@ import org.jetbrains.annotations.Nullable;
 import java.util.List;
 
 public class GlassBlock extends Block {
-    public static final BooleanProperty UP = BooleanProperty.of("up");
-    public static final BooleanProperty DOWN = BooleanProperty.of("down");
-    public static final BooleanProperty NORTH = BooleanProperty.of("north");
-    public static final BooleanProperty SOUTH = BooleanProperty.of("south");
-    public static final BooleanProperty EAST = BooleanProperty.of("east");
-    public static final BooleanProperty WEST = BooleanProperty.of("west");
 
     public GlassBlock(Settings settings) {
         super(settings);
-        this.setDefaultState(this.getDefaultState()
-                .with(UP, false)
-                .with(DOWN, false)
-                .with(NORTH, false)
-                .with(SOUTH, false)
-                .with(EAST, false)
-                .with(WEST, false)
-        );
-    }
-
-    @Override
-    protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
-        builder.add(UP, DOWN, NORTH, SOUTH, EAST, WEST);
-    }
-
-    @Override
-    public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState neighborState, WorldAccess world, BlockPos pos, BlockPos neighborPos) {
-        return state
-                .with(UP, world.getBlockState(pos.up()).getBlock() == this)
-                .with(DOWN, world.getBlockState(pos.up()).getBlock() == this)
-                .with(NORTH, world.getBlockState(pos.north()).getBlock() == this)
-                .with(SOUTH, world.getBlockState(pos.south()).getBlock() == this)
-                .with(EAST, world.getBlockState(pos.east()).getBlock() == this)
-                .with(WEST, world.getBlockState(pos.west()).getBlock() == this);
     }
 
     public boolean isSideInvisible(BlockState state, BlockState stateFrom, Direction direction) {

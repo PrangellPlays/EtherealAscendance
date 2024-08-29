@@ -4,10 +4,16 @@
 	"compatibilityLevel": "JAVA_17",
 	"mixins": [
 	    "server.StellaryxDisableSwimming",
-		"server.LivingEntityMixin"
+		"server.LivingEntityMixin",
+		"server.HungerManagerMixin",
+		"server.NoVoidDamageInSpaceLivingEntityMixin"
 	],
 	"client": [
 	    "client.BackgroundRendererMixin",
+		"client.AbstractClientPlayerEntityMixin",
+		"client.InGameHudMixin",
+		"client.DownloadingTerrainScreenMixin",
+		"client.WorldRendererAccessor",
 		"client.WorldRendererMixin"
 	],
 	"injectors": {

@@ -2,11 +2,19 @@
   "sounds.experience_vial.withdraw": {
     "sounds": [
       "etherealascendance:item/experience_vial/withdraw"
-    ]
+    ],
+    "subtitle": "subtitles.item.experience_vial.withdraw"
   },
   "sounds.experience_vial.deposit": {
     "sounds": [
       "etherealascendance:item/experience_vial/deposit"
-    ]
+    ],
+    "subtitle": "subtitles.item.experience_vial.deposit"
+  },
+  "sounds.privacy_glass.toggle": {
+    "sounds": [
+      "etherealascendance:block/privacy_panel_toggle"
+    ],
+    "subtitle": "subtitles.block.privacy_glass.toggle"
   }
 }

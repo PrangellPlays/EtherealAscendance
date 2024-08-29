@@ -103,6 +103,10 @@ public abstract class StellaryxFluid extends FlowableFluid {
         return direction == Direction.DOWN && !fluid.isIn(FluidTags.WATER);
     }
 
+    private void playExtinguishEvent(WorldAccess world, BlockPos pos) {
+        world.syncWorldEvent(1501, pos, 0);
+    }
+
     protected float getBlastResistance() {
         return 100.0F;
     }

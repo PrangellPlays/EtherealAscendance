@@ -1,37 +1,41 @@
 package dev.soulsparkstudios.etherealascendance;
 
-import dev.soulsparkstudios.etherealascendance.dimension.EtherealAscendanceDimensions;
+import dev.soulsparkstudios.etherealascendance.client.render.world.SpaceSky;
 import dev.soulsparkstudios.etherealascendance.registry.EtherealAscendanceBlocks;
+import dev.soulsparkstudios.etherealascendance.registry.EtherealAscendanceDimensions;
 import dev.soulsparkstudios.etherealascendance.registry.EtherealAscendanceFluids;
+import foundry.veil.api.client.render.VeilRenderSystem;
+import foundry.veil.api.client.render.post.PostPipeline;
+import foundry.veil.api.client.render.post.PostProcessingManager;
+import foundry.veil.api.event.VeilRenderLevelStageEvent;
+import foundry.veil.platform.VeilEventPlatform;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
+import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.fabricmc.fabric.api.client.render.fluid.v1.FluidRenderHandlerRegistry;
 import net.fabricmc.fabric.api.client.render.fluid.v1.SimpleFluidRenderHandler;
+import net.fabricmc.fabric.api.client.rendering.v1.DimensionRenderingRegistry;
+import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.world.ClientWorld;
 import net.minecraft.util.Identifier;
+import net.minecraft.world.World;
+import org.joml.Quaterniond;
+import org.joml.Vector3d;
+
+import java.util.Iterator;
 
 @SuppressWarnings("unused")
 public class EtherealAscendanceClient implements ClientModInitializer {
-
-	public static Identifier renderAsMoon(String path) {
-		return EtherealAscendance.path("textures/environment/phases/" + path + ".png");
-	}
-	public static Identifier renderAsFloorBody(String path) {
-		return EtherealAscendance.path("textures/environment/body/" + path + ".png");
-	}
-
-	public static final Identifier SKYBOX_UP = EtherealAscendance.path("textures/environment/sky/space/space1.png");
-	public static final Identifier SKYBOX_DOWN = EtherealAscendance.path("textures/environment/sky/space/space2.png");
-	public static final Identifier SKYBOX_LEFT = EtherealAscendance.path("textures/environment/sky/space/space3.png");
-	public static final Identifier SKYBOX_RIGHT = EtherealAscendance.path("textures/environment/sky/space/space4.png");
-	public static final Identifier SKYBOX_FRONT = EtherealAscendance.path("textures/environment/sky/space/space5.png");
-	public static final Identifier SKYBOX_BACK = EtherealAscendance.path("textures/environment/sky/space/space6.png");
-	public static final Identifier SUN = EtherealAscendance.path("textures/environment/sun.png");
-	public static final Identifier MOON = EtherealAscendance.path("textures/environment/moon.png");
+	public static final SpaceSky SPACE_SKY = new SpaceSky();
 
 	@Override
 	public void onInitializeClient() {
+		ClientTickEvents.START_WORLD_TICK.register(SPACE_SKY);
+		DimensionRenderingRegistry.registerDimensionEffects(EtherealAscendanceDimensions.SPACE.getValue(), new SpaceSky.Effects());
+		DimensionRenderingRegistry.registerSkyRenderer(EtherealAscendanceDimensions.SPACE, SPACE_SKY);
+		DimensionRenderingRegistry.registerCloudRenderer(EtherealAscendanceDimensions.SPACE, c -> {});
+
 		FluidRenderHandlerRegistry.INSTANCE.register(EtherealAscendanceFluids.STELLARYX_STILL, EtherealAscendanceFluids.STELLARYX_FLOWING, new SimpleFluidRenderHandler(
 				new Identifier("etherealascendance:block/fluid/stellaryx_still"),
 				new Identifier("etherealascendance:block/fluid/stellaryx_flowing"),
@@ -41,29 +45,7 @@ public class EtherealAscendanceClient implements ClientModInitializer {
 
 		BlockRenderLayerMap.INSTANCE.putBlock(EtherealAscendanceBlocks.GLASS, RenderLayer.getTranslucent());
 		BlockRenderLayerMap.INSTANCE.putBlock(EtherealAscendanceBlocks.PRIVACY_GLASS, RenderLayer.getTranslucent());
-	}
-
-	public static Identifier getMoon(ClientWorld world) {
-		boolean orbit = EtherealAscendanceDimensions.isOrbit(world);
-		if (orbit) {
-			switch (world.getRegistryKey().getValue().getPath()) {
-				case "overworld_orbit":
-					return MOON;
-				case "sylene_orbit":
-					return renderAsMoon("overworld");
-			}
-
-		} else {
-			// no if statement here for later expansion
-			switch (world.getRegistryKey().getValue().getPath()) {
-				case "sylene":
-					return renderAsMoon("overworld");
-				case "psidon":
-					return renderAsFloorBody("ouran");
-			}
 		}
-		return renderAsMoon("none");
-	}
 
 	public static boolean shouldMultiplyStars() {
 		return true;

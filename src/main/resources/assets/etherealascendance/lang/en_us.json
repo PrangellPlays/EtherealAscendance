@@ -5,6 +5,7 @@
   "item.etherealascendance.experience_vial.levels": "Experience: %1$s",
   "item.etherealascendance.experience_vial.usage.fill": "%1$s + %2$s to fill",
   "item.etherealascendance.experience_vial.usage.drain": "%1$s to drain",
+  "item.etherealascendance.rations": "Ration Pack",
 
   "__Comment": "Canisters",
   "item.etherealascendance.empty_canister": "Empty Canister",
@@ -19,8 +20,9 @@
   "block.etherealascendance.privacy_glass.description_2": "Has connected textures",
 
   "_comment": "Sounds",
-  "sounds.sculk_vial.withdraw": "Experience Withdrew",
-  "sounds.sculk_vial.deposit": "Experience Deposited",
+  "subtitles.item.experience_vial.withdraw": "Experience Withdrew",
+  "subtitles.item.experience_vial.deposit": "Experience Deposited",
+  "subtitles.block.privacy_glass.toggle": "Privacy Glass Toggles",
 
   "__Comment": "Item Groups",
   "itemgroup.etherealascendance.items": "Ethereal Ascendance Items",

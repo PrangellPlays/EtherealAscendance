@@ -17,6 +17,7 @@ public class EtherealAscendanceItemGroups {
                 entries.add(EtherealAscendanceItems.STELLARYX_CANISTER);
                 entries.add(EtherealAscendanceItems.STELLARYX_BUCKET);
                 entries.add(EtherealAscendanceItems.EXPERIENCE_VIAL);
+                entries.add(EtherealAscendanceItems.RATIONS);
             }).build());
     public static final ItemGroup ETHEREAL_ASCENDANCE_BLOCKS = Registry.register(Registries.ITEM_GROUP,
             new Identifier(EtherealAscendance.MOD_ID, "blocks"),

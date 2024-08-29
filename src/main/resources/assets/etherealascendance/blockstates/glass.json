@@ -1,4 +1,12 @@
 {
+  "athena:loader": "athena:ctm",
+  "ctm_textures": {
+    "center": "etherealascendance:block/glass/glass_ctm/3",
+    "empty": "etherealascendance:block/glass/glass_ctm/0",
+    "horizontal": "etherealascendance:block/glass/glass_ctm/2",
+    "particle": "etherealascendance:block/glass/glass",
+    "vertical": "etherealascendance:block/glass/glass_ctm/1"
+  },
   "variants": {
     "": { "model": "etherealascendance:block/glass"}
   }

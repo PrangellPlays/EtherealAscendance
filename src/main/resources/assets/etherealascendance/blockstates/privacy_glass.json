@@ -1,9 +1,10 @@
 {
+
   "variants": {
-    "private=false": {
+    "private_=false": {
       "model": "etherealascendance:block/privacy_glass"
     },
-    "private=true": {
+    "private_=true": {
       "model": "etherealascendance:block/privacy_glass_private"
     }
   }
