@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "etherealascendance:block/space_helmet_rat",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "etherealascendance:block/space_helmet_rat"
+    },
+    "facing=south": {
+      "model": "etherealascendance:block/space_helmet_rat",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "etherealascendance:block/space_helmet_rat",
+      "y": 270
+    }
+  }
+}

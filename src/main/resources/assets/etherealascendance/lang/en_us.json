@@ -19,6 +19,12 @@
   "block.etherealascendance.privacy_glass.description_1": "%1$s to toggle privacy",
   "block.etherealascendance.privacy_glass.description_2": "Has connected textures",
 
+  "__Comment": "Space Helmets",
+  "block.etherealascendance.space_helmet": "Space Helmet",
+  "block.etherealascendance.space_helmet_desc": "Basic",
+  "block.etherealascendance.space_helmet_rat": "Space Helmet",
+  "block.etherealascendance.space_helmet_rat_desc": "Rat",
+
   "_comment": "Sounds",
   "subtitles.item.experience_vial.withdraw": "Experience Withdrew",
   "subtitles.item.experience_vial.deposit": "Experience Deposited",

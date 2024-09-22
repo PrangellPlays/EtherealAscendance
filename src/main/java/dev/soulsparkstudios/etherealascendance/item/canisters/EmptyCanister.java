@@ -1,11 +1,7 @@
 package dev.soulsparkstudios.etherealascendance.item.canisters;
 
-import com.google.common.collect.ImmutableMap;
-import com.google.common.collect.Maps;
-import dev.soulsparkstudios.etherealascendance.registry.EtherealAscendanceBlocks;
-import dev.soulsparkstudios.etherealascendance.registry.EtherealAscendanceFluids;
-import dev.soulsparkstudios.etherealascendance.registry.EtherealAscendanceItems;
-import net.minecraft.block.Block;
+import dev.soulsparkstudios.etherealascendance.init.EtherealAscendanceBlocks;
+import dev.soulsparkstudios.etherealascendance.init.EtherealAscendanceItems;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.entity.player.PlayerEntity;
@@ -15,8 +11,6 @@ import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
-
-import java.util.Map;
 
 public class EmptyCanister extends Item {
     public EmptyCanister(Settings settings) {

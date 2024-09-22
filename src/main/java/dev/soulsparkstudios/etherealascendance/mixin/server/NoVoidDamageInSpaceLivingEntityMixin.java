@@ -1,6 +1,6 @@
 package dev.soulsparkstudios.etherealascendance.mixin.server;
 
-import dev.soulsparkstudios.etherealascendance.registry.EtherealAscendanceDimensions;
+import dev.soulsparkstudios.etherealascendance.init.EtherealAscendanceDimensions;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;

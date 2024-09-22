@@ -1,4 +1,4 @@
-package dev.soulsparkstudios.etherealascendance.registry;
+package dev.soulsparkstudios.etherealascendance.init;
 
 import net.minecraft.item.FoodComponent;
 

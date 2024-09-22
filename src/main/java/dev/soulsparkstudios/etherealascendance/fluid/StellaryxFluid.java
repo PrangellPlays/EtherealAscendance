@@ -1,8 +1,8 @@
 package dev.soulsparkstudios.etherealascendance.fluid;
 
-import dev.soulsparkstudios.etherealascendance.registry.EtherealAscendanceBlocks;
-import dev.soulsparkstudios.etherealascendance.registry.EtherealAscendanceFluids;
-import dev.soulsparkstudios.etherealascendance.registry.EtherealAscendanceItems;
+import dev.soulsparkstudios.etherealascendance.init.EtherealAscendanceBlocks;
+import dev.soulsparkstudios.etherealascendance.init.EtherealAscendanceFluids;
+import dev.soulsparkstudios.etherealascendance.init.EtherealAscendanceItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.FluidBlock;

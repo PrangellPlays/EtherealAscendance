@@ -1,25 +1,16 @@
 package dev.soulsparkstudios.etherealascendance;
 
-import dev.soulsparkstudios.etherealascendance.registry.EtherealAscendanceBlocks;
-import dev.soulsparkstudios.etherealascendance.registry.EtherealAscendanceFluids;
-import dev.soulsparkstudios.etherealascendance.registry.EtherealAscendanceItems;
-import dev.soulsparkstudios.etherealascendance.registry.EtherealAscendanceItemGroups;
+import dev.soulsparkstudios.etherealascendance.init.*;
 import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.client.render.fluid.v1.FluidRenderHandlerRegistry;
 import net.fabricmc.fabric.api.client.render.fluid.v1.SimpleFluidRenderHandler;
-import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.client.item.ModelPredicateProviderRegistry;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
-import net.minecraft.server.MinecraftServer;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.util.Identifier;
-import net.minecraft.world.World;
-import org.apache.logging.log4j.core.util.UuidUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

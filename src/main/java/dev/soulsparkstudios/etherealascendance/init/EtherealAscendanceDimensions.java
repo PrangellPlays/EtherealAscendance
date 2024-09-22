@@ -1,6 +1,5 @@
-package dev.soulsparkstudios.etherealascendance.registry;
+package dev.soulsparkstudios.etherealascendance.init;
 
-import com.google.common.collect.ImmutableMap;
 import dev.soulsparkstudios.etherealascendance.EtherealAscendance;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;

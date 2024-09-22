@@ -1,29 +1,17 @@
 package dev.soulsparkstudios.etherealascendance;
 
 import dev.soulsparkstudios.etherealascendance.client.render.world.SpaceSky;
-import dev.soulsparkstudios.etherealascendance.registry.EtherealAscendanceBlocks;
-import dev.soulsparkstudios.etherealascendance.registry.EtherealAscendanceDimensions;
-import dev.soulsparkstudios.etherealascendance.registry.EtherealAscendanceFluids;
-import foundry.veil.api.client.render.VeilRenderSystem;
-import foundry.veil.api.client.render.post.PostPipeline;
-import foundry.veil.api.client.render.post.PostProcessingManager;
-import foundry.veil.api.event.VeilRenderLevelStageEvent;
-import foundry.veil.platform.VeilEventPlatform;
+import dev.soulsparkstudios.etherealascendance.init.EtherealAscendanceBlocks;
+import dev.soulsparkstudios.etherealascendance.init.EtherealAscendanceDimensions;
+import dev.soulsparkstudios.etherealascendance.init.EtherealAscendanceFluids;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.fabricmc.fabric.api.client.render.fluid.v1.FluidRenderHandlerRegistry;
 import net.fabricmc.fabric.api.client.render.fluid.v1.SimpleFluidRenderHandler;
 import net.fabricmc.fabric.api.client.rendering.v1.DimensionRenderingRegistry;
-import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.render.RenderLayer;
-import net.minecraft.client.world.ClientWorld;
 import net.minecraft.util.Identifier;
-import net.minecraft.world.World;
-import org.joml.Quaterniond;
-import org.joml.Vector3d;
-
-import java.util.Iterator;
 
 @SuppressWarnings("unused")
 public class EtherealAscendanceClient implements ClientModInitializer {
@@ -45,6 +33,7 @@ public class EtherealAscendanceClient implements ClientModInitializer {
 
 		BlockRenderLayerMap.INSTANCE.putBlock(EtherealAscendanceBlocks.GLASS, RenderLayer.getTranslucent());
 		BlockRenderLayerMap.INSTANCE.putBlock(EtherealAscendanceBlocks.PRIVACY_GLASS, RenderLayer.getTranslucent());
+		BlockRenderLayerMap.INSTANCE.putBlock(EtherealAscendanceBlocks.SPACE_HELMET_RAT, RenderLayer.getCutout());
 		}
 
 	public static boolean shouldMultiplyStars() {

@@ -1,7 +1,7 @@
 package dev.soulsparkstudios.etherealascendance.mixin.client;
 
 import com.mojang.blaze3d.systems.RenderSystem;
-import dev.soulsparkstudios.etherealascendance.registry.EtherealAscendanceFluids;
+import dev.soulsparkstudios.etherealascendance.init.EtherealAscendanceFluids;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.network.ClientPlayerEntity;
 import net.minecraft.client.render.BackgroundRenderer;
